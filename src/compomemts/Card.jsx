@@ -1,5 +1,6 @@
 import React from "react"
 import Avatar from "./Avatar"
+import Details from "./Details"
 
 function Card (props) {
     return (
@@ -11,8 +12,10 @@ function Card (props) {
                 />
             </div>
             <div className="bottom">
-                <p className="info">{props.phone}</p>
-                <p className="info">{props.email}</p>
+                <Details 
+                    phone = {props.phone}
+                    email = {props.email}
+                />    
             </div>
         </div>
     )
