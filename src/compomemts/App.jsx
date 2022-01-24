@@ -1,30 +1,30 @@
 import React from "react";
-import contacts from "../contacts";
 import Card from "./Card";
+import emojipedia from "../emojipedia"
 
-function App(props) {
+function generateCard(emojiEl) {
+  return (
+    <Card
+      key = {emojiEl.id}
+      emoji = {emojiEl.emojiUrl}
+      name = {emojiEl.name}
+      meaning = {emojiEl.meaning}
+    />
+  )
+}
+
+function App() {
   return (
     <div>
-      <h1 className="heading">My Contacts</h1>
-      <Card 
-        name = {contacts[0].name}
-        img = {contacts[0].imgURL}
-        phone = {contacts[0].phone}
-        email = {contacts[0].email}
-      />
-      <Card 
-        name = {contacts[1].name}
-        img = {contacts[1].imgURL}
-        phone = {contacts[1].phone}
-        email = {contacts[1].email}
-      />
-      <Card 
-        name = {contacts[2].name}
-        img = {contacts[2].imgURL}
-        phone = {contacts[2].phone}
-        email = {contacts[2].email}
-      />
+      <h1>
+        <span>Web Development</span>
+      </h1>
+
+      <dl className="dictionary">
+        {emojipedia.map(generateCard)}
+      </dl>
     </div>
-  );
+  )
 }
-export default App
+
+export default App;

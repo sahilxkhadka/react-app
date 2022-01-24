@@ -1,67 +1,107 @@
 body {
-    font-family: sans-serif;
-    margin: 0 auto;
-    padding: 25px;
-    background-color: #dfe6e9;
-    text-align: center;
-    min-width: 400px;
-    max-width: 400px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.666;
+  background: #c0d2d4;
+  color: #555;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 400%;
+  text-align: center;
+  margin-top: 4rem;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h1 span {
+  padding: 10px 30px;
+  background: rgb(46, 194, 176);
+  border-radius: 20px;
+  box-shadow: rgba(96, 96, 247, 0.25) 0px 30px 60px -12px inset, rgba(194, 29, 29, 0.3) 0px 18px 36px -18px inset;
+}
+
+.dictionary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 4rem auto;
+  max-width: 90%;
+}
+
+.dictionary > .term {
+  text-align: center;
+  width:25%;
+  margin-bottom: 3rem;
+  padding:6rem 2rem;
+  box-shadow: 0 2px 0 rgba(46, 94, 176, 0.4), 0 5px 20px rgba(46, 94, 176, 0.4);
+  background-color: #fff;
+  border-radius: 15px;
+  transition: all 100ms ease-in-out;
+}
+
+.dictionary > .term > dt {
+  margin-bottom: 1rem;
+}
+
+dt {
+  color: #2ec2b0;
+  line-height: 1;
+}
+
+dt span {
+  font-size: 200%;
+  font-weight: 900;
+}
+
+.emoji {
+  margin: 0 auto 20px;
+  display: block;
+  font-size: 400%;
+}
+
+dd {
+  font-size: 92.5%;
+  margin-left: 0;
+}
+
+dd dt {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: inherit;
+}
+
+dd dl {
+  font-size: 90%;
+  margin: 1rem auto 0 auto;
+  letter-spacing: 0.33px;
+  max-width: 15rem;
+}
+
+dd dl .term {
+  margin-bottom: 1rem;
+}
+img {
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 1254px) {
+  .dictionary {
+    flex-direction: column;
   }
-  
-  .heading {
-    text-align: center;
-    font-size: 2em;
-    color: #2d3436;
-    margin: 20px 0 30px;
+  .dictionary > .term {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  .card {
-    border-radius: 25px;
-    position: relative;
-    padding: 25px 15px;
-    background-color: #81ecec;
-    margin: 50px 0;
-    height: 200px;
-    box-shadow: 0 2px 5px #ccc;
-    text-align: left;
+}
+@media (max-width: 868px) {
+  h1 {
+    font-weight: 200;
+    font-size: 2rem;
   }
-  
-  .top {
-    border-radius: 25px 25px 0 0;
-    height: 100px;
-    width: 100%;
-    background-color: #00cec9;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-  }
-  
-  .name {
-    font-size: 2em;
-    color: #2d3436;
-    display: flex;
-    flex: 1;
-    margin: 10% 20px 0;
-  }
-  
-  .card img {
-    margin: 30px 20px 0 0;
-  }
-  
-  .circle-img {
-    border-radius: 50%;
-    border: 7px solid #fff;
-    width: 120px;
-    height: 120px;
-  }
-  
-  .bottom {
-    margin-top: 120px;
-  }
-  
-  .info {
-    margin: 20px 0;
-    color: #1a7e76;
-  }
-  
+}

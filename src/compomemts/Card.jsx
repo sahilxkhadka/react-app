@@ -1,24 +1,16 @@
-import React from "react"
-import Avatar from "./Avatar"
-import Details from "./Details"
+import React from "react";
 
-function Card (props) {
+function Card(props) {
     return (
-        <div className="card">
-            <div className="top">
-                <h2 className="name">{props.name}</h2>
-                <Avatar
-                    img = {props.img}
-                />
-            </div>
-            <div className="bottom">
-                <Details 
-                    phone = {props.phone}
-                    email = {props.email}
-                />    
-            </div>
+        <div className="term">
+          <dt>
+            <img src= {props.emoji} alt="" className="emoji"/>
+            <span>{props.name}</span>
+          </dt>
+          <dd>
+            {props.meaning}
+          </dd>
         </div>
     )
 }
-
 export default Card
